@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Pribadi</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome untuk ikon media sosial -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Tirai -->
+  <div class="curtain left-curtain"></div>
+  <div class="curtain right-curtain"></div>
+
+  <!-- Background Langit dan Elemen Dekorasi -->
+  <div class="sky-background">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌼</div>
+    <div class="flower flower3">🌺</div>
+    <div class="flower flower4">💮</div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <!-- Konten Portofolio -->
+  <div class="container">
+    <section class="profile scroll-fade">
+      <img src="pictportofolio.jpg" alt="Foto Pribadi" class="profile-pic">
+      <h1>Natalia Enjelina Sihotang</h1>
+      <p class="info">📍 Medan, Indonesia | 📧 Nattaliaashtg@gmail.com | 📞 0822-6232-7851</p>
+    </section>
+
+    <section class="section scroll-fade">
+      <h2>Biodata Pribadi</h2>
+      <ul>
+        <li><strong>Nama:</strong> Natalia Enjelina Sihotang </li>
+        <li><strong>Tempat, Tanggal Lahir:</strong> Manduamas, 23 Desember 2006</li>
+        <li><strong>Alamat:</strong> Jl. Tombak No 76c, sidorejo Hilir, Kec.Medan Tembung, Medan</li>
+        <li><strong>Email:</strong> Nattaliaashtg@gmail.com</li>
+        <li><strong>No HP:</strong> 0822-6232-7851</li>
+        <li><strong>Hobi:</strong> Mendengar Musik, menggambar dan menonton Film Thriller</li> 
+      </ul>
+    </section>
+
+    <section class="section scroll-fade">
+      <h2>Latar Pendidikan</h2>
+      <ul>
+        <li>S1 Ilmu Komputer - Universitas Negeri Medan (2025 - sekarang)</li>
+        <li>SMA Negeri 1 Manduamas - IPA (2022 - 2025)</li>
+        <li>SMP Negeri 1 Manduamas - (2019 - 2022)</li>
+        <li>SD Negeri 157641 Masnauli 2 - (2013 - 2019)</li>
+        <li>PAUD Matahari Masnauli 2 - (2012 - 2013)</li>
+      </ul>
+    </section>
+
+    <section class="section scroll-fade">
+      <h2>Tentang Saya</h2>
+      <ul>
+        <li>Saya Natalia Enjelina Sihotang, seorang mahasiswa Universitas Negeri Medan prodi Ilmu Komputer.
+        Sebagai mahasiswa ilmu komputer, Sejak kecil, saya selalu penasaran dengan bagaimana teknologi bekerja di balik layar—mulai dari aplikasi yang sering saya gunakan hingga sistem digital yang kompleks. Ketertarikan itu tumbuh menjadi hasrat untuk memahami logika pemrograman, membangun solusi digital, dan menciptakan sesuatu yang bermanfaat bagi banyak orang.
+Memilih prodi Ilmu Komputer adalah keputusan yang alami bagi saya, karena di sini saya bisa menggabungkan rasa ingin tahu, kreativitas, dan kemampuan analisis untuk mengeksplorasi dunia teknologi. Selain itu, belajar ilmu komputer memberi saya kesempatan untuk terus berkembang, mengikuti tren teknologi terbaru, dan menghadapi tantangan baru dengan penuh semangat.</li>
+        
+      </ul>
+    </section>
+
+    <section class="section scroll-fade">
+      <h2>Organisasi</h2>
+      <ul>
+        <li>Marchingband SMA (2021, 2024)</li>
+        <li>Kepramukaan (2024)</li>
+        <li>Wakil Ketua OSIS (2024)</li>
+        <li>Bendahara OSIS (2022)</li>
+        <li>Ketua OSIS (2020)</li>
+      </ul>
+    </section>
+
+    <section class="section scroll-fade">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>Terampil menggunakan Microsoft Office (Word, Excel, PowerPoint)</li>
+        <li>Berpengalaman dalam melakukan hosting website melalui GitHub</li>
+        <li>Menguasai penggunaan Visual Studio Code untuk menulis kode dan melakukan debugging</li>
+        <li>Mampu mengatur file serta menyusun struktur folder proyek secara sistematis</li>
+        <li>Cepat beradaptasi dengan teknologi baru serta memiliki kemampuan belajar mandiri</li>
+      </ul>
+    </section>
+
+    <!-- Media Sosial -->
+    <section class="social-links scroll-fade">
+      <h2>Media Sosial</h2>
+      <p>
+        <a href="https://www.instagram.com/nataliaenj_?igsh=NnkwNTJ1bTFyaHl4 " target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        |
+        <a href="https://www.facebook.com/share/1Cot9F26tQ/ " target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </p>
+    </section>
+  </div>
+
+  <!-- Script Animasi Tirai & Scroll Fade -->
+  <script>
+    // Tirai Buka
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".curtain").forEach(curtain => {
+        curtain.classList.add("open");
+      });
+
+      setTimeout(() => {
+        document.querySelectorAll(".curtain").forEach(curtain => {
+          curtain.style.display = "none";
+        });
+      }, 2500);
+    });
+
+    // Scroll fade-in
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
